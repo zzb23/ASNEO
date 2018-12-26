@@ -1,0 +1,129 @@
+
+
+   NetCTLpan 1.1              INSTALLATION INSTRUCTIONS
+
+
+   DESCRIPTION
+
+   The NetCTLpan 1.1 software predicts CTL epitopes in protein sequences. The
+   current version 1.1 is an update to the original NetCTL server that allows
+   for prediction  of  CTL epitope  with  restriction to any MHC molecules of
+   known  protein sequence.  NetCTLpan integrates prediction  of peptide  MHC
+   class I binding, proteasomal C terminal cleavage and the efficiency of TAP
+   transport. MHC class I binding and proteasomal cleavage is performed using
+   artificial neural networks.  TAP transport efficiency  is predicted  using
+   weight matrix. The method is described in detail in the following article:
+
+   NetCTLpan - Pan-specific MHC class I epitope predictions.
+   Stranzl T., Larsen M. V., Lundegaard C., Nielsen M.
+   Immunogenetics. 2010 Jun;62(6):357-68. [Epub ahead of print] Apr 9, 2010.
+
+   More information about the method can be found at:
+   
+      http://www.cbs.dtu.dk/services/NetCTLpan-1.1/
+
+
+   DOWNLOAD
+
+   The netCTLpan 1.1 software package is a  property of Center for Biological
+   Sequence Analysis.  It may be downloaded  only  by special agreement.  For
+   academic users there is a download site at:
+
+        http://www.cbs.dtu.dk/cgi-bin/nph-sw_request?netCTLpan
+
+   Other users are requested to contact software@cbs.dtu.dk.
+
+
+   PRE-INSTALLATION
+
+   netCTLpan 1.1 currently runs under Darwin (MacOSX) and Linux.  The package
+   consists of two files:
+  
+      netCTLpan-1.1.readme         this file
+      netCTLpan-1.1.<unix>.tar.Z   compressed TAR archive
+
+   where 'unix' is the UNIX platform on which you are about to install. After
+   installation the software will occupy less than 60 Mb of diskspace.
+
+
+   INSTALLATION
+
+   1. Uncompress and untar the package:
+
+      > cat netCTLpan-1.1.<unix>.tar.Z | uncompress | tar xvf -
+
+      This will produce a directory (folder) 'netCTLpan-1.1'.
+
+   2. From the CBS WWW site download the file:
+
+      http://www.cbs.dtu.dk/services/NetCTLpan-1.1/data_netCTLpan-1.1.tar.Z
+
+      It should be 1128401 bytes. Put it in the 'netCTLpan-1.1' folder,  then
+      uncompress and untar it:
+      
+      > uncompress data_netCTLpan-1.1.tar.Z
+      > cat data_netCTLpan-1.1.tar | tar xvf -
+      
+      This will produce a directory 'data_netCTLpan-1.1' (4MB).  Rename it to
+      just 'data'. It is necessary for the NetCTLpan 1.1 software to operate;
+      once it is installed you may delete the original TAR file - it will not
+      be needed.
+
+   3. From the CBS WWW site download the file:
+
+      http://www.cbs.dtu.dk/services/NetCTLpan-1.1/data_netMHCpan-2.3.tar.Z
+
+      It should be 5274967 bytes. Put it in the 'netCTLpan-1.1/netMHCpan-2.3'
+      folder, uncompress and untar it:
+      
+      > uncompress data_netMHCpan-2.3.tar.Z
+      > cat data_netMHCpan-2.3.tar | tar xvf -
+      
+      This will produce a directory 'data_netMHCpan-2.3' (20MB). Rename it to
+      just 'data'. It is necessary for the NetCTLpan 1.1 software to operate;
+      once it is installed you may delete the original TAR file - it will not
+      be needed.
+
+   4. In the 'netCTLpan-1.1' directory edit the main script 'netCTLpan':
+   
+      a. At the top of the file  locate the part labelled  "GENERAL SETTINGS:
+         CUSTOMIZE TO YOUR SITE"  and set  the 'NMHOME' variable  to the full
+	 path to the 'netCTLpan-1.1' directory on your system;
+
+      b. Set TMPDIR to the full path to the tmp directory of you choice (must
+         be user writable, preferably with the sticky bit set);
+
+   5. In the 'netMHCpan-1.1/test' directory test the software:
+
+      > ../netCTLpan test.fsa > test.fsa.myout
+      > ../netCTLpan -hlaseq B0702.fsa test.fsa >test.fsa_HLASEQ.myout
+
+      The resulting ".myout" files  should not differ  from the corresponding
+      ".out" files provided in the package  other than in the directory names
+      and rounding errors.
+
+   6. Finish the installation:
+
+      a. Copy or link the 'netCTLpan' file to a directory in the users' path.
+
+      b. Copy the 'netCTLpan.1' file to a location  in your manual system. If
+         you need a compiled version try running:
+
+         man -d netCTLpan.1 | compress >netCTLpan.Z
+
+         or:
+
+         neqn netCTLpan.1 | tbl | nroff -man | col | compress >netCTLpan.Z
+
+   7. Enjoy ...
+
+
+   PROBLEMS
+
+   Contact packages@cbs.dtu.dk in case of problems.
+   
+   Questions on the scientific aspects of the netMHCpan method should be sent
+   to dr Morten Nielsen, mniel@cbs.dtu.dk.
+
+   CBS, 8 Jul 2013
+   K. Rapacki
