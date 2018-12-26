@@ -8,6 +8,7 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 * python
 * bedtools
 * netMHCpan
+* netCTLpan
 
 ### python package
 * pandas
@@ -24,12 +25,12 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 1. git clone https://github.com/zzb23/ASNEO.git
 2. cd ASNEO/example
 3. bash run_ASNEO.sh hg19.fa 
-> `hg19.fa` should change to your own reference genome file
+> `hg19.fa` should change to your own reference genome file (must be hg19 or GRCh37)
 
-For detailed usage information, please refer to the [ASNEO User Manual](/doc/AS_User_Manual.md)
+For detailed usage information, please refer to the [ASNEO User Manual](/doc/ASNEO_User_Manual.md)
 
 ## Citation
-Zhanbing Zhang, Qi Liu et al. *ASNEO: a computational pipeline to identify Alternative Splicing NEOantigens. 2018*  (**Submitting**)
+TODO
 
 ## Contact
 zhangzb@tongji.edu.cn or qiliu@tongji.edu.cn
