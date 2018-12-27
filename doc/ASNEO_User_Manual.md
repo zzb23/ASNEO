@@ -87,24 +87,24 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 
 The output file "putative_neo.txt" contains all putative neoantigens information.
 
-Column | Description
- - | -: |
-HLA | HLA type
-mismatch | The base number differet between mtpep and wtpep 
-MTpep | Alternative splicing derived neopeptide
-MTpep_score | netMHCpan predicted score of mtpep
-MTpep_aff | netMHCpan predicted affinity of mtpep
-MTpep_rank | netMHCpan predicted bind rank(%) of mtpep
-MTpep_comb | netCTLpan predicted comb score of mtpep, combind MHC score, cleavage score and TAP score
-WTpep | pepmatch_db_x86_64 extracted normal peptide
-WTpep_score |  netMHCpan predicted score of wtpep
-WTpep_aff | netMHCpan predicted affinity of wtpep
-WTpep_rank | netMHCpan predicted bind rank(%) of wtpep
-WTpep_comb | netCTLpan predicted comb score of wtpep, combind MHC score, cleavage score and TAP score
-Hydro_Model | Neopeptide immunity mesurement based on animo acid hydrophobicity
-R | T cell recognition score calculated based on TCR cross reactivity
-Score | Immunogenicty score for neoantigens
-Junc_info | The source junctions' information of the neoantigen
+| Column | Description |
+| - | -: |
+| HLA | HLA type |
+| mismatch | The base number differet between mtpep and wtpep |
+| MTpep | Alternative splicing derived neopeptide |
+| MTpep_score | netMHCpan predicted score of mtpep |
+| MTpep_aff | netMHCpan predicted affinity of mtpep |
+| MTpep_rank | netMHCpan predicted bind rank(%) of mtpep |
+| MTpep_comb | netCTLpan predicted comb score of mtpep, combind MHC score, cleavage score and TAP score |
+| WTpep | pepmatch_db_x86_64 extracted normal peptide |
+| WTpep_score |  netMHCpan predicted score of wtpep |
+| WTpep_aff | netMHCpan predicted affinity of wtpep |
+| WTpep_rank | netMHCpan predicted bind rank(%) of wtpep |
+| WTpep_comb | netCTLpan predicted comb score of wtpep, combind MHC score, cleavage score and TAP score |
+| Hydro_Model | Neopeptide immunity mesurement based on animo acid hydrophobicity |
+| R | T cell recognition score calculated based on TCR cross reactivity |
+| Score | Immunogenicty score for neoantigens |
+| Junc_info | The source junctions' information of the neoantigen, the format like this: transcript_id:protein_id:gene_symbol@JUNC:chrom_start_stop@RPKM:rpkm_value(strand), mutiple junctions are seperated by "|". Note: start,stop are 0-based intron start stop coordinate; rpkm_value=-1 means we didn't caculate it  |
 
 
 ## Citation
