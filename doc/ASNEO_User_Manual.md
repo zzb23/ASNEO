@@ -104,7 +104,10 @@ The output file "putative_neo.txt" contains all putative neoantigens information
 | Hydro_Model | Neopeptide immunity mesurement based on animo acid hydrophobicity |
 | R | T cell recognition score calculated based on TCR cross reactivity |
 | Score | Immunogenicty score for neoantigens |
-| Junc_info | The source junctions' information of the neoantigen, the format like this: transcript_id:protein_id:gene_symbol@JUNC:chrom_start_stop@RPKM:rpkm_value(strand), mutiple junctions are seperated by "\|". Note: start,stop are 0-based intron start stop coordinate; rpkm_value=-1 means we didn't caculate it  |
+| Junc_info | The source junctions' information of the neoantigen, the format like this: 
+transcript_id:protein_id:gene_symbol@JUNC:chrom_start_stop@RPKM:rpkm_value(strand)
+mutiple junctions are seperated by "\|". 
+Note: start,stop are 0-based intron start stop coordinate; rpkm_value=-1 means we didn't caculate it  |
 
 
 ## Citation
