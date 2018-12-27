@@ -11,7 +11,7 @@ from math import log, exp
 from Bio import SeqIO, pairwise2
 from Bio.SubsMat import MatrixInfo as matlist
 from argparse import ArgumentParser
-from xgboost import XGBClassifier
+#from xgboost import XGBClassifier
 
 warnings.filterwarnings('ignore')
 logging.basicConfig(level=logging.INFO, format='%(asctime)s [%(levelname)s]:  %(message)s')
