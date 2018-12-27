@@ -87,8 +87,8 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 
 The output file "putative_neo.txt" contains all putative neoantigens information.
 
-column | description
-- | -: 
+Column | Description
+ - | -: |
 HLA | HLA type
 mismatch | The base number differet between mtpep and wtpep 
 MTpep | Alternative splicing derived neopeptide
