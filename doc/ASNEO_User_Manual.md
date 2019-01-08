@@ -55,7 +55,7 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 
   * --psi
 
-	Cutoff of psi value(0-1), default 0.1.  [See PSI means here][https://github.com/olgabot/sj2psi].
+	Cutoff of psi value(0-1), default 0.1.  [See PSI means here](https://github.com/olgabot/sj2psi).
 
   * --bind
 
