@@ -16,6 +16,7 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 * sj2psi
 * pysam
 * biopython
+* xgboost
 
 ## Usage
 ### input
@@ -24,7 +25,7 @@ ASNEO is a computational pipeline to identify personalized tumor neoantigens der
 
 ### example
 1. git clone https://github.com/zzb23/ASNEO.git
-2. cd ASNEO/example
+2. cd ASNEO/test
 3. bash run_ASNEO.sh hg19.fa 
 > `hg19.fa` should change to your own reference genome file (must be hg19 or GRCh37)
 
