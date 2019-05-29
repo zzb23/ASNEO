@@ -17,7 +17,7 @@ setenv	NMHOME	`readlink -f "$DIR2"`
 # determine where to store temporary files (must be writable to all users)
 
 if ( ${?TMPDIR} == 0 ) then
-	setenv  TMPDIR  /home/zbzhang/tmp
+	setenv  TMPDIR  /tmp
 endif
 
 # determine platform (do not change this unless you don't have 'uname'!)
